@@ -61,6 +61,7 @@ pipeline {
                             git pull --rebase origin main
                             
                             # Perform sed update, commit, and push
+                            git clone https://\${GH_USER}:\${GH_TOKEN}@github.com/sreelakshmi-2004/maker_pipeline.git .
                             sed -i '/name: maker/{n;s|image:.*|image: sreelakshmins2004/maker:${env.BUILD_NUMBER}|}' manifests/deployment.yaml
                             git config user.name "sreelakshmi-2004"
                             git config user.email "sreelakshmins873@gmail.com"
