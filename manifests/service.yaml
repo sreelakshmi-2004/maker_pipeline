@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: maker-service
-  namespace: production
+  name: maker-deployment
+  namespace: argocd
   labels:
     app: maker
 spec:
